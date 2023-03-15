@@ -1,72 +1,10 @@
-*,
-*::after,
-*::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-:root {
-	--black: black;
-	--deep-blue: #16254f;
-	--grey: #4a4a4a;
-	--whtie: white;
-	--white-grey: #bbb;
-}
-
-.modal {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 10px;
-	z-index: 10;
-	background-color: var(--whtie);
-	max-width: 50%;
-	min-width: 19rem;
-	color: var(--deep-blue);
-	font-family: Arial;
-	font-size: 0.7rem;
-}
-
-.modal__header {
-	padding: 0.4rem 0.2rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border-radius: 9px 9px 0px 0px;
-	background-color: var(--deep-blue);
-	color: var(--whtie);
-	padding: 0.6rem;
-	font-size: 0.8rem;
-}
-
-.modal__header--title {
-	font-weight: bold;
-	padding-right: 0.1rem;
-}
-
-.modal__header--close-btn {
-	cursor: pointer;
-	border: none;
-	outline: none;
-	background: none;
-	font-size: 0.9rem;
-	font-weight: bold;
-	color: var(--whtie);
-	padding-left: 0.2rem;
-}
+/********************************first par*************************************/
 .modal__body--first-paragraph {
 	position: relative;
 	display: grid;
 	padding-left: 1rem;
 	margin-bottom: 1rem;
 }
-h1 {
-	float: right;
-	font-size: 0.8rem;
-}
-/********************************first par*************************************/
 .rating__satisfaction {
 	margin: 1rem;
 }
@@ -176,42 +114,3 @@ hr.solid {
 	border-radius: 50px;
 }
 /************************************four par********************************/
-@media (max-width: 600px) {
-	.modal {
-		border-radius: 0;
-		max-width: 60%;
-		min-width: 17rem;
-		border: 1px solid var(--grey);
-	}
-	.modal__header {
-		border-radius: 0px;
-		background-color: var(--deep-blue);
-	}
-	.modal__header--close-btn {
-		visibility: hidden;
-		position: relative;
-	}
-	.modal__header--close-btn::after {
-		visibility: visible;
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding-left: 0.2rem;
-		content: "x";
-	}
-	.share-button {
-		top: 1rem;
-	}
-	.cancel-button {
-		visibility: hidden;
-	}
-}
-#overlay {
-	position: fixed;
-	opacity: 50%;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.5);
-}
