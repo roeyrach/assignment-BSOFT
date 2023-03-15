@@ -19,14 +19,14 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border: 1px solid var(--black);
 	border-radius: 10px;
 	z-index: 10;
 	background-color: var(--whtie);
-	max-width: 80%;
-	min-width: 18rem;
-	font-size: 0.8rem;
+	max-width: 50%;
+	min-width: 19rem;
 	color: var(--deep-blue);
+	font-family: Arial;
+	font-size: 0.7rem;
 }
 
 .modal__header {
@@ -37,11 +37,13 @@
 	border-radius: 9px 9px 0px 0px;
 	background-color: var(--deep-blue);
 	color: var(--whtie);
+	padding: 0.6rem;
+	font-size: 0.8rem;
 }
 
 .modal__header--title {
 	font-weight: bold;
-	padding-right: 0.4rem;
+	padding-right: 0.1rem;
 }
 
 .modal__header--close-btn {
@@ -52,12 +54,13 @@
 	font-size: 0.9rem;
 	font-weight: bold;
 	color: var(--whtie);
-	padding-left: 0.4rem;
+	padding-left: 0.2rem;
 }
 .modal__body--first-paragraph {
 	position: relative;
 	display: grid;
 	padding-left: 1rem;
+	margin-bottom: 1rem;
 }
 h1 {
 	float: right;
@@ -76,9 +79,6 @@ h1 {
 	grid-row: auto;
 }
 .rating--row-stars {
-	/* gap: 0.7rem;
-	block-size: 1.5rem;
-	border: none; */
 	display: flex;
 	grid-row: auto;
 	justify-content: space-between;
@@ -86,40 +86,7 @@ h1 {
 	gap: 0.4rem;
 }
 
-/*********************************************************************************************************/
-
-/* .rating {
-	position: relative;
-	display: inline-block;
-	font-size: 0;
-	cursor: pointer;
-	display: flex;
-	gap: 0.9rem;
-	margin: auto;
-	transform: scale(0.7);
-	right: 2rem;
-	max-width: inherit;
-}
-
-.rating > input {
-	display: none;
-}
-
-.rating > label {
-	display: inline-block;
-	width: 25px;
-	height: 25px;
-	margin: 0;
-	padding: 0;
-	background-image: url("images/star-empty-darkBlue.svg");
-	background-size: cover;
-}
-
-.rating > input:checked ~ label {
-	background-image: url("images/star-full-darkBlue.svg");
-} */
-
-/*********************************************************************************************************/
+/******************************************************************************/
 .image-container {
 	position: relative;
 }
@@ -204,7 +171,8 @@ hr.solid {
 	.modal {
 		border-radius: 0;
 		max-width: 60%;
-		min-width: 15rem;
+		min-width: 17rem;
+		border: 1px solid var(--grey);
 	}
 	.modal__header {
 		border-radius: 0px;
@@ -239,4 +207,14 @@ hr.solid {
 	position: relative;
 	text-align: center;
 	color: var(--deep-blue);
+}
+
+#overlay {
+	position: fixed;
+	opacity: 50%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
 }
