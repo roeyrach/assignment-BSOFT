@@ -66,6 +66,7 @@ h1 {
 	float: right;
 	font-size: 0.8rem;
 }
+/********************************first par*************************************/
 .rating__satisfaction {
 	margin: 1rem;
 }
@@ -86,10 +87,18 @@ h1 {
 	gap: 0.4rem;
 }
 
-/******************************************************************************/
-.image-container {
-	position: relative;
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
+.container {
+	position: relative;
+	text-align: center;
+	color: var(--deep-blue);
+}
+/********************************first par*************************************/
 hr.solid {
 	border-top: 1.3px solid var(--grey);
 	opacity: 0.3;
@@ -138,7 +147,7 @@ hr.solid {
 	color: var(--grey);
 	margin-bottom: 1rem;
 }
-.--inner {
+.four-paragraph--inner {
 	color: rgb(19, 99, 247);
 	text-decoration: underline;
 }
@@ -197,18 +206,6 @@ hr.solid {
 		visibility: hidden;
 	}
 }
-.centered {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-.container {
-	position: relative;
-	text-align: center;
-	color: var(--deep-blue);
-}
-
 #overlay {
 	position: fixed;
 	opacity: 50%;
