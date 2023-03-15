@@ -1,0 +1,217 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--black: black;
+	--deep-blue: #16254f;
+	--grey: #4a4a4a;
+	--whtie: white;
+	--white-grey: #bbb;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+	z-index: 10;
+	background-color: var(--whtie);
+	max-width: 50%;
+	min-width: 19rem;
+	color: var(--deep-blue);
+	font-family: Arial;
+	font-size: 0.7rem;
+}
+
+.modal__header {
+	padding: 0.4rem 0.2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 9px 9px 0px 0px;
+	background-color: var(--deep-blue);
+	color: var(--whtie);
+	padding: 0.6rem;
+	font-size: 0.8rem;
+}
+
+.modal__header--title {
+	font-weight: bold;
+	padding-right: 0.1rem;
+}
+
+.modal__header--close-btn {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: var(--whtie);
+	padding-left: 0.2rem;
+}
+.modal__body--first-paragraph {
+	position: relative;
+	display: grid;
+	padding-left: 1rem;
+	margin-bottom: 1rem;
+}
+h1 {
+	float: right;
+	font-size: 0.8rem;
+}
+/********************************first par*************************************/
+.rating__satisfaction {
+	margin: 1rem;
+}
+.rating--row {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 1rem;
+	padding-bottom: 0.5rem;
+	grid-row: auto;
+}
+.rating--row-stars {
+	display: flex;
+	grid-row: auto;
+	justify-content: space-between;
+	transform: scale(0.8);
+	gap: 0.4rem;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.container {
+	position: relative;
+	text-align: center;
+	color: var(--deep-blue);
+}
+/********************************first par*************************************/
+hr.solid {
+	border-top: 1.3px solid var(--grey);
+	opacity: 0.3;
+	border-radius: 5px;
+	width: 92%;
+	align-items: inherit;
+	justify-content: inherit;
+	bottom: 0;
+	margin: 1rem;
+	width: 92%;
+	margin: auto;
+}
+/************************************second par********************************/
+.modal__body--second-paragraph {
+	position: relative;
+	display: grid;
+	float: right;
+	gap: 0.5rem;
+	padding-right: 1rem;
+	margin-top: 1rem;
+}
+.second__paragraph--type-here {
+	color: var(--white-grey);
+	padding-bottom: 4rem;
+}
+/************************************second par********************************/
+
+/************************************third par********************************/
+.modal__body--third-paragraph {
+	display: flex;
+	float: right;
+	gap: 0.2rem;
+	align-items: center;
+	padding-right: 1rem;
+	margin: 0.5rem 0rem 0.5rem 0rem;
+}
+/************************************third par********************************/
+
+/************************************four par********************************/
+.modal__body--four-paragraph {
+	display: flex;
+	float: right;
+	gap: 0.3rem;
+	align-items: center;
+	padding: 1rem 0.5rem 0.5rem 0.5rem;
+	color: var(--grey);
+	margin-bottom: 1rem;
+}
+.four-paragraph--inner {
+	color: rgb(19, 99, 247);
+	text-decoration: underline;
+}
+#btn {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 0;
+	width: 50%;
+	margin: auto;
+	padding: 0.5rem;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+}
+.share-button {
+	background-color: var(--deep-blue);
+	border: none;
+	color: var(--whtie);
+	border-radius: 50px;
+}
+.cancel-button {
+	border: none;
+	background: transparent;
+	border: none !important;
+	border-radius: 50px;
+}
+/************************************four par********************************/
+@media (max-width: 600px) {
+	.modal {
+		border-radius: 0;
+		max-width: 60%;
+		min-width: 17rem;
+		border: 1px solid var(--grey);
+	}
+	.modal__header {
+		border-radius: 0px;
+		background-color: var(--deep-blue);
+	}
+	.modal__header--close-btn {
+		visibility: hidden;
+		position: relative;
+	}
+	.modal__header--close-btn::after {
+		visibility: visible;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-left: 0.2rem;
+		content: "x";
+	}
+	.share-button {
+		top: 1rem;
+	}
+	.cancel-button {
+		visibility: hidden;
+	}
+}
+#overlay {
+	position: fixed;
+	opacity: 50%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
